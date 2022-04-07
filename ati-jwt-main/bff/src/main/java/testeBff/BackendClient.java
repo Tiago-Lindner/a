@@ -16,7 +16,7 @@ import io.quarkus.oidc.token.propagation.AccessToken;
 public interface BackendClient {
     
     @GET
-    @Path("/{a}/{b}")
+    @Path("/getsum/{a}/{b}")
     @Produces(MediaType.TEXT_PLAIN)
     @RolesAllowed({"Admin"})
     public int getSum(@PathParam("a") int a, @PathParam("b") int b);
